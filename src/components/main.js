@@ -1,5 +1,6 @@
 import Sidebar from './sidebar';
 import React from 'react';
+import RightPanel from './RightPanel';
 
 function Main() {
     return (
@@ -10,7 +11,9 @@ function Main() {
                         <Sidebar/>
                     </div>
                     <div className="col-md-4"></div>
-                    <div className="col-md-4"></div>
+                    <div className="col-md-4">
+                        <RightPanel/>
+                    </div>
 
                 </div>
 
