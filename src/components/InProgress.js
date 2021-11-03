@@ -1,4 +1,4 @@
-
+import Progress from './Progress';
 import React from 'react';
 
 function InProgress() {
@@ -10,7 +10,7 @@ function InProgress() {
                                 <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
                                     <div className="carousel-inner">
                                       <div className="carousel-item active">
-                                        <div className="card border-primary mb-3 img-fluid">
+                                        {/* <div className="card border-primary mb-3 img-fluid">
                                             <img className="card-img-top" src="./img/swimming.jpeg" style={{maxWidth: '100%'}}/>
                                               <div className="card-img-overlay card-body">
                                                   <div className="">
@@ -18,13 +18,14 @@ function InProgress() {
                                                   </div>
                                                   
                                                   <p id="ss2" className="card-text text-white">25 Mins</p>
-                                                  <p className="card-text text-white">Description</p>
+                                                  <p className="card-text text-wbrhite">Description</p>
                                                   <div className="progress">
                                                     <div className="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style={{width: '40%'}} aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                                                   </div>
                                               </div>
                                               
-                                          </div>
+                                          </div> */}
+                                          
                                       </div>
                                       <div className="carousel-item">
                                         <div className="card border-primary mb-3 img-fluid">
