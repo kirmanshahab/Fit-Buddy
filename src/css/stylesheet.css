@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: sans-serif;
+}
+
+#logo{
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+#logo img{
+  max-width: 100%;
+  height: auto;
+  margin-left: 40%;
+}
+
+.container-login {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+  background-image: url(../img/pexels-ivan-samkov-4164770.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  
+}
+
+
+
+.signin-signup {
+  position: absolute;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  left: 47%;
+  width: 50%;
+  transition: 1s 0.7s ease-in-out;
+
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0rem 5rem;
+  
+
+}
+
+
+
+.title {
+  font-size: 2.2rem;
+  color: whitesmoke;
+  margin-bottom: 10px;
+  font-weight: bolder;
+}
+
+.input-field {
+  max-width: 380px;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 10px 0;
+  height: 55px;
+  border-radius: 55px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  padding: 0 0.4rem;
+  position: relative;
+}
+
+.input-field i {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #acacac;
+  font-size: 1.1rem;
+ 
+}
+
+.input-field input {
+  background: none;
+  outline: none;
+  border: none;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+ 
+}
+
+.input-field input::placeholder {
+  color: #aaa;
+  font-weight: 500;
+}
+
+.social-text {
+  padding: 0.7rem 0;
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.45rem;
+  color: rgb(241, 221, 221);
+  border-radius: 50%;
+  border: 1px solid #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 300;
+  
+}
+.social-icon:hover {
+  color: rgb(49, 10, 10);
+  border-color: #4b7a45;
+}
+
+.btn1 {
+  width: 150px;
+  background-color: #5995fd;
+  border: none;
+  outline: none;
+  height: 50px;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  text-align: center;
+  padding-top: 20px;
+  text-decoration: none;
+ 
+}
+.btn1:hover {
+  background-color:whitesmoke;
+  color: black;
+  font-weight: bolder;
+}
+
+@media (max-width: 870px) {
+  .container {
+    min-height: 800px;
+    height: 100vh;
+  }
+  #logo{
+    margin-left: -10%;
+  }
+  .signin-signup {
+    width: 100%;
+
+    transition: 1s 0.8s ease-in-out;
+  }
+}
+  @media (max-width: 480px) {
+    /* .container {
+    background-image: none;
+    background-color: rgb(12, 29, 66);
+    color: white;
+    height: 100vh;
+    } */
+    .title{
+      /* color:rgb(74, 74, 75); */
+
+    }
+    .social-icon{
+      /* color: rgb(12, 12, 54); */
+    }
+    form{
+      padding: 10px;
+    }
+  }
+
+  #profile-pic, #second-pic{
+    height: 60%;
+    width: 60%;
+}
+
+.hov:hover{
+  font-size: 20px;
+  font-weight: bolder; 
+}
+
+.p-holder::placeholder{
+  color: #fff;
+}
