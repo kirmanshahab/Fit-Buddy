@@ -20,7 +20,7 @@ function Sidebar() {
                         <EditExerciseModal/>
                         <InProgress/>
                         <Pending/>
-                        <Completed/>
+                        
                         
                         
                         

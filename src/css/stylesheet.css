@@ -197,6 +197,11 @@ form {
     height: 60%;
     width: 60%;
 }
+.card-hov:hover{
+  background-color: white;
+  color: #007BFF;
+  border: 1px solid #007BFF;
+}
 
 .hov:hover{
   font-size: 20px;
