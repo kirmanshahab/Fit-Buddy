@@ -7,7 +7,7 @@ const RpImage = () => {
     } 
     return (
         <div   >
-                <img src= {img1} alt="txt" style = {styling} id="profile-pic" className = 'image-fluid my-2' />         
+                <img src= {img1} alt="txt" style = {styling} id="profile-pic" className = 'ml-5 image-fluid my-2' />         
         </div>
     )
 }

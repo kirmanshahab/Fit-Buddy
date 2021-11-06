@@ -2,10 +2,10 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 import '../css/stylesheet.css';
 import logo3 from '../img/logo-3.png';
-import Completed from './completed';
 import EditExerciseModal from './editExerciseModal';
 import InProgress from './InProgress';
 import Pending from './pending';
+import RpImage from './RpImage'
 
 function Sidebar() {
     const history = useHistory();
@@ -17,11 +17,11 @@ function Sidebar() {
                 </div>
                 <div className="">
                     <div className="d-flex flex-column">
-                        <EditExerciseModal/>
+                        {/* <EditExerciseModal/>
                         <InProgress/>
-                        <Pending/>
+                        <Pending/> */}
                         
-                        
+                        <RpImage/>
                         
                         
                     </div>

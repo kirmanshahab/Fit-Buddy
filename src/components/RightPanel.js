@@ -9,7 +9,7 @@ import  './../App.css';
 const RightPanel = () => {
     return (
         <div className= 'd-flex flex-column text-center rounded-end-3 mt-2'>
-            <RpImage /> 
+            
              
             <RpDailyChallenge />
             <RpBmi />

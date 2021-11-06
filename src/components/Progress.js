@@ -42,7 +42,7 @@ const Progress = ({cardList, setCardList, onCompleted, remove}) => {
    
     return (
       <>
-        <h3 className='text-center my-5 bg-primary rounded-pill py-3'>In Progress</h3>
+        <h3 className='text-center my-5 bg-primary text-white rounded-pill py-3'>In Progress</h3>
            <div className= 'd-flex justify-content-start flex-wrap'>
                
                 {cardList.map((card, index) => {
