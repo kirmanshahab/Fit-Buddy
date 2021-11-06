@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/Fit-Buddy/static/css/main.1b326b65.chunk.css",
+    "main.js": "/Fit-Buddy/static/js/main.934c024c.chunk.js",
+    "main.js.map": "/Fit-Buddy/static/js/main.934c024c.chunk.js.map",
+    "runtime-main.js": "/Fit-Buddy/static/js/runtime-main.81726fcb.js",
+    "runtime-main.js.map": "/Fit-Buddy/static/js/runtime-main.81726fcb.js.map",
+    "static/css/2.8757ddda.chunk.css": "/Fit-Buddy/static/css/2.8757ddda.chunk.css",
+    "static/js/2.642a7c4e.chunk.js": "/Fit-Buddy/static/js/2.642a7c4e.chunk.js",
+    "static/js/2.642a7c4e.chunk.js.map": "/Fit-Buddy/static/js/2.642a7c4e.chunk.js.map",
+    "static/js/3.009c423f.chunk.js": "/Fit-Buddy/static/js/3.009c423f.chunk.js",
+    "static/js/3.009c423f.chunk.js.map": "/Fit-Buddy/static/js/3.009c423f.chunk.js.map",
+    "index.html": "/Fit-Buddy/index.html",
+    "static/css/2.8757ddda.chunk.css.map": "/Fit-Buddy/static/css/2.8757ddda.chunk.css.map",
+    "static/css/main.1b326b65.chunk.css.map": "/Fit-Buddy/static/css/main.1b326b65.chunk.css.map",
+    "static/js/2.642a7c4e.chunk.js.LICENSE.txt": "/Fit-Buddy/static/js/2.642a7c4e.chunk.js.LICENSE.txt",
+    "static/media/60111.cfe9f79c.jpg": "/Fit-Buddy/static/media/60111.cfe9f79c.jpg",
+    "static/media/logo.6ce24c58.svg": "/Fit-Buddy/static/media/logo.6ce24c58.svg",
+    "static/media/stylesheet.css": "/Fit-Buddy/static/media/pexels-ivan-samkov-4164770.c57ee5b3.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.81726fcb.js",
+    "static/css/2.8757ddda.chunk.css",
+    "static/js/2.642a7c4e.chunk.js",
+    "static/css/main.1b326b65.chunk.css",
+    "static/js/main.934c024c.chunk.js"
+  ]
+}
