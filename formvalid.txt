@@ -1,0 +1,49 @@
+const LoginV2 = ({}) => {
+    // state
+    
+    const [loginForm, setLoginForm] = useState({
+    email: undefined,
+            password: undefined,
+            emailValid: false,
+            passwordValid: false,
+          });
+          const [error, setError] = useState({ email: undefined, password: undefined });
+
+// state update        
+          const handleLoginForm = (e) => {
+            checkValidity(e.target.name, e.target.value);
+            setLoginForm({ ...loginForm, [e.target.name]: e.target.value });
+          };
+// validation function        
+          const checkValidity = (inputName, inputValue) => {
+            switch (inputName) {
+              case "email":
+                let pattern = /[a-z0-9!#$%&'+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'+/=?^_`{|}~-]+)@(?:[a-z0-9](?:[a-z0-9-][a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+                loginForm.emailValid = pattern.test(inputValue);
+                break;
+              case "password":
+                loginForm.passwordValid = inputValue.length >= 6;
+                break;
+              default:
+                break;
+            }
+          };
+ // form submit       
+          const onSubmitLoginForm = () => {
+            console.log(loginForm);
+            if (!loginForm.emailValid) {
+              setError(prevError => {
+                  return { 
+                      ...prevError, 
+                      email: "Invalid Email Address" 
+                    }
+              }); 
+            }
+            if (!loginForm.passwordValid) {
+              setError(prevError => {
+                  return {
+                ...prevError,
+                password: "Password must be at least six characters long"
+              }
+            }); 
+            }
