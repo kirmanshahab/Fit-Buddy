@@ -34,10 +34,10 @@
 
 import React from 'react'
 import Card from './Card'
-
-const Progress = ({cardList, setCardList, onCompleted, remove}) => {
+import { useSelector } from 'react-redux'
+const Progress = ({  onCompleted, remove}) => {
    
-
+const cardList= useSelector((state)=> state.taskReducer.cardList)
     
    
     return (
@@ -48,7 +48,7 @@ const Progress = ({cardList, setCardList, onCompleted, remove}) => {
                 {cardList.map((card, index) => {
                 return(
                     
-                    <Card cardList={cardList} key={index} card={card} id={index} remove={remove} onCompleted={onCompleted}/>
+                    <Card  key={index} card={card} id={index} remove={remove} onCompleted={onCompleted}/>
                 )
             })}
            </div>

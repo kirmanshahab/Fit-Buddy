@@ -1,27 +1,23 @@
-
-
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { completeTask, deleteTask } from '../actions'
+import { completeTask, deleteTask, deleteCompletedTask } from '../actions'
 
-// const dispatch = useDispatch()
 
-const Card = ({ card, id,remove, onCompleted,Checked,del}) => {
+
+const CompletedCards = ({card}) => {
     const dispatch = useDispatch()
 
     const clickHandler = (id) =>{
-        dispatch(deleteTask(id))
+        dispatch(deleteCompletedTask(id))
     }
-
-    const completedTask =(data)=>{
-        dispatch(completeTask(data))
-        dispatch(deleteTask(data.id))
-    }
-    console.log(card);
+    console.log(card)
+    // const completedTask =(data)=>{
+    //     dispatch(completeTask(data))
+    //     dispatch(deleteTask(data.id))
+    // }
     return (
-
         <div>
-           <div className="card mx-5 my-3 border-bottom border-3 border-success" style={{width: '14rem', borderRadius: '20px'  }} >
+             <div className="card mx-5 my-3 border-bottom border-3 border-success" style={{width: '14rem', borderRadius: '20px'  }} >
                         <img className="card-img-top" src="" alt="" />
                         <div className="card-body fw-bolder">
                         Excercise:{card.data.excercise} <br />
@@ -32,7 +28,7 @@ const Card = ({ card, id,remove, onCompleted,Checked,del}) => {
   
                         </div>
                         <div className= 'd-flex justify-content-end me-2 mb-2'> 
-                            <button type='button' className='btn rounded-3 mx-auto ' onClick={()=>{completedTask(card)}}  >✔️</button>
+                            {/* <button type='button' className='btn rounded-3 mx-auto ' onClick={()=>{completedTask(card)}}  >✔️</button> */}
                             {/* <input type='checkbox' className="mx-2 " name='isCompleted' checked={Checked} value={card.isCompleted} onClick={()=>{onCompleted(id)}} /> */}
                             <div className= 'd-flex justify-content-end ' onClick={()=>{clickHandler(card.id)}}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
@@ -47,5 +43,4 @@ const Card = ({ card, id,remove, onCompleted,Checked,del}) => {
     )
 }
 
-export default Card
-
+export default CompletedCards

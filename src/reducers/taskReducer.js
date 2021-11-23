@@ -1,35 +1,38 @@
 
-const initialData = {
-    list: []
+const initialCardList = {
+   cardList: [],
+    
 }
 
-const taskReducer  = (state= initialData, action)=>{
-    switch(action.type){
-        case 'Add-Task':
-            const {id, data} = action.payload;
-
-            return {
-                ...state,
-                list: [
-                    ...state.list,
-                    {
-                        id: id,
-                        data: data
-                    }
-                ]
-            }
-
-            case 'Delete-Task':
-                const newList = state.list.filter((elem)=>elem.id !== action.id);
     
-                return {
-                    ...state,
-                   list: newList
-                }    
 
+
+const taskReducer  = (state= initialCardList, actions)=>{
+    
+    
+    switch(actions.type){
+        case 'Add-Task':
+            return { 
+                ...state,
             
-                
-        default: return state;    
+                cardList: [...state.cardList, {data: actions.payload.data, id: actions.payload.data } ]
+            }
+           
+        case 'Delete-Task':
+            const newList = state.cardList.filter((elem)=>elem.id !== actions.payload.id);
+            return { 
+                cardList: newList
+            }
+        
+       
+        
+            
+        
+
+
+        default:
+             return state;   
+        
     }
 }
 

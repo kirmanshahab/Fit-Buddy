@@ -4,9 +4,13 @@ import React, {useState} from 'react'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Accordion from 'react-bootstrap/Accordion'
-import Completed from './Completed'
+import Completed from './completed'
 // import FloatingLabel from 'react-bootstrap/FloatingLabel'
 import Progress from './Progress'
+import { useDispatch } from 'react-redux'
+import { completedTask } from '../actions'
+import { addTask } from '../actions'
+
 
 const FormRight = () => {
 
@@ -15,51 +19,56 @@ const FormRight = () => {
     const [completed, setCompleted]= useState([])
     const [checked, setChecked] = useState(false);
     
+    const dispatch = useDispatch()
+
     const onChangeHandler= ({target})=>{
         const {name,value}= target;
         setCard((prev) => {
             return(
                 {
                     ...prev,
-                    // eslint-disable-next-line no-restricted-globals
+                    
                     [name]: value
                 }
             )
         })
     }
     const clickHandler = () =>{
-        setCardList((prev) => {
-            return(
-                [...prev, card]
-            )
-        })
+        // setCardList((prev) => {
+        //     return(
+        //         [...prev, card]
+        //     )
+        // })
+         dispatch(addTask(card))
     }
-    const onCompleted = (id)=> {
-        const newVal= cardList.filter((card,key)=>{
-            return key === id
-       })
-       console.log(newVal)
-        setCardList((prev)=> {
+    // const onCompleted = (id)=> {
+    //     const newVal= cardList.filter((card,key)=>{
+    //         return key === id
+    //    })
+    //    console.log(newVal)
+    //     setCardList((prev)=> {
            
-             return prev.filter((card,key)=>{
-                 return key !== id
+    //          return prev.filter((card,key)=>{
+    //              return key !== id
  
-             })
-         })
-         setCompleted((prev)=>{
+    //          })
+    //      })
+    //      setCompleted((prev)=>{
             
-                return (
-                    [...prev, newVal[0]]
+    //             return (
+    //                 [...prev, newVal[0]]
                     
-                )
+    //             )
 
                 
 
-    })
-    console.log(completed)
-    setChecked(true)
+    // })
+    // console.log(completed)
+    // setChecked(true)
+
     
-        }
+    
+    //     }
     const remove = (id)=> {
         setCardList((prev)=> {
            return prev.filter((card,key)=>{
@@ -117,7 +126,7 @@ const FormRight = () => {
                 </Accordion.Item>
   
             </Accordion>
-            <Progress cardList= {cardList} setCardList={setCardList} onCompleted={onCompleted} remove={remove}/>
+            <Progress cardList= {cardList} setCardList={setCardList}  remove={remove}/>
             <Completed completed={completed} cardList= {cardList} remove={remove} checked={checked} del={del}/>
         </div>
            
